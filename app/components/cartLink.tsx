@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ShoppingCartIcon } from "@heroicons/react/20/solid";
-
+import CartTotalIndicator from "@/app/components/cartTotalIndicator";
 export default function CartLink({ path = "/" }: { path?: string }) {
   return (
     <Link
@@ -13,6 +13,7 @@ export default function CartLink({ path = "/" }: { path?: string }) {
         aria-hidden="true"
       />
       View Cart
+      <CartTotalIndicator/>
     </Link>
   );
 }

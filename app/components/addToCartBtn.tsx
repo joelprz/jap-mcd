@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import {StaticImageData} from "next/image";
-type CartType = {
+
+export type CartType = {
     [key: string]: number,
 }
 export default function AddToCartButton({productId}:{productId:string}) {
@@ -16,6 +16,7 @@ export default function AddToCartButton({productId}:{productId:string}) {
     // Persist component state to local storage
     useEffect(() => {
         window.localStorage.setItem('MCD_APP_STATE', JSON.stringify(shoppingCart));
+        window.dispatchEvent(new Event("CartUpdated"));
     }, [shoppingCart]);
 
     // TODO This should probably be debounced in a real-world scenario
