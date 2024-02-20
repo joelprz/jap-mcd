@@ -4,6 +4,7 @@ import {ArrowUturnLeftIcon} from "@heroicons/react/20/solid";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import AddToCartButton from "@/app/components/addToCartBtn";
 export default async function BurgerPage({ params }: { params: { burger: string } }) {
     const product = await fetchProduct(params.burger);
     const formattedPrice = formatCurrency(product.price);
@@ -36,17 +37,12 @@ export default async function BurgerPage({ params }: { params: { burger: string 
                             />
                             Back to List
                         </Link>
-                        <button
-                            type="submit"
-                            className="flex w-1/2 items-center justify-center rounded-md border border-transparent bg-accent px-8 py-3 text-base font-medium text-zinc-800 shadow-sm hover:brightness-95 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
-                        >
-                            Add to Cart
-                        </button>
+                        <AddToCartButton productId={product.id} />
                     </div>
                 </div>
                 {/* Product image */}
                 <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-                    <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg relative w-[500px] h-[500px]">
+                    <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg relative w-full h-[500px]">
                         <Image
                             style={{
                                 objectFit: "cover",
