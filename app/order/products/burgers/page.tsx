@@ -10,6 +10,7 @@ import burgerA from "@/public/products/burger-a.jpeg"
 import chickenBurger from "@/public/products/chicken-burger.jpeg"
 import fries from "@/public/products/fries.jpeg"
 import mushroomBurger from "@/public/products/mushroom-burger.jpeg"
+import Link from "next/link";
 
 
 export default async function Page() {
@@ -38,16 +39,18 @@ export default async function Page() {
             products.map((product, idx) => {
                 return (
                 <div key={product.id} className="min-h-[400px] relative">
-                  <Image
-                    priority={idx === 0}
-                    style={{
-                      objectFit: "cover",
-                    }}
-                    fill={true}
-                    sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
-                    alt={product.slug}
-                    src={burgerMap[product.image]}
-                  />
+                  <Link href={`/order/products/burgers/${product.slug}`}>
+                      <Image
+                        priority={idx === 0}
+                        style={{
+                          objectFit: "cover",
+                        }}
+                        fill={true}
+                        sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
+                        alt={product.slug}
+                        src={burgerMap[product.image]}
+                      />
+                  </Link>
                 </div>
               );
             })}
