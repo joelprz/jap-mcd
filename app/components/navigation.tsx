@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import CartLink from "./cartLink";
 import arches from "../../public/arches-logo.svg";
+import LogoutButton from "./logoutBtn";
 
 export default function Navigation() {
   return (
@@ -26,8 +27,10 @@ export default function Navigation() {
             </div>
           </div>
           <div className="flex items-center px-2 lg:px-0">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 flex space-x-2">
               <CartLink path="/order/cart" />
+              {/*TODO Hide logout button when user is not authenticated*/}
+              <LogoutButton />
             </div>
           </div>
         </div>

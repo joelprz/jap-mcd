@@ -14,13 +14,16 @@
     "@heroicons/react": "^2.1.1",
     "@tailwindcss/forms": "^0.5.7",
     "@vercel/postgres": "^0.7.2",
-    "bcrypt": "^5.1.1",
+    "bcryptjs-react": "^2.4.6",
     "dotenv": "^16.4.4",
     "next": "14.1.0",
+    "next-auth": "5.0.0-beta.11",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -12,7 +12,7 @@ export default function CartLink({ path = "/" }: { path?: string }) {
         className="-ml-0.5 h-5 w-5 text-zinc-800"
         aria-hidden="true"
       />
-      View cart
+      View Cart
     </Link>
   );
 }
