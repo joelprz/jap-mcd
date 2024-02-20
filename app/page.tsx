@@ -1,6 +1,6 @@
 import LoginForm from "./components/login-form";
 import Image from "next/image";
-import BlackBurger from "../public/products/black-burger.jpeg"
+import BlackBurger from "@/public/products/black-burger.jpeg"
 
 export default function Index() {
   return (
