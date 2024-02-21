@@ -12,7 +12,7 @@ export default function LoginForm() {
         <div>
             <label
                 htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-200"
             >
                 Email
             </label>
@@ -30,7 +30,7 @@ export default function LoginForm() {
         <div>
             <label
                 htmlFor="password"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium leading-6 text-gray-900 dark:text-gray-200"
             >
                 Password
             </label>

@@ -9,7 +9,7 @@ export default async function Navigation() {
   const session = await auth();
 
   return (
-    <div className="border-b border-gray-200 bg-white">
+    <div className="border-b border-b-gray-200 dark:border-b-accent bg-white dark:bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex items-center px-2 lg:px-0">
