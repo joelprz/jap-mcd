@@ -10,8 +10,8 @@ export default async function BurgerPage({ params }: { params: { burger: string 
     const formattedPrice = formatCurrency(product.price);
 
     return (
-        <div className="bg-white">
-            <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-20 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div className="bg-white mb-[165px] sm:mb-[65px]">
+            <div className="mx-auto max-w-2xl px-4 sm:px-6 sm:py-20 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 <div className="lg:max-w-lg lg:self-end">
                     <div className="mt-4">
                         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{product.name}</h1>
@@ -41,7 +41,7 @@ export default async function BurgerPage({ params }: { params: { burger: string 
                 </div>
                 {/* Product image */}
                 <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-                    <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg relative w-full h-[500px]">
+                    <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg relative w-full h-[300px] sm:h-[500px]">
                         <Image
                             style={{
                                 objectFit: "cover",
