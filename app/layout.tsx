@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className="h-full">
         <div className="min-h-full">
           <Navigation />
-          <div className="p-10">{children}</div>
+          <div className="p-4 sm:p-10">{children}</div>
         </div>
       </body>
     </html>
