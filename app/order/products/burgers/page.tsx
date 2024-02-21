@@ -23,7 +23,7 @@ export default async function Page() {
   }
 
   return (
-      <div className="bg-white mb-[65px]">
+      <div className="bg-white mb-[165px] sm:mb-[65px]">
           <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-8">
               <div className="mx-auto max-w-2xl lg:mx-0">
                   <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Burgers</h1>

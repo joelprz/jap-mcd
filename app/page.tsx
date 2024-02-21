@@ -5,13 +5,11 @@ import BlackBurger from "@/public/products/black-burger.jpeg"
 export default function Index() {
   return (
     <div className="flex min-h-full flex-1 bg-white dark:bg-black rounded-lg overflow-hidden sm:border border-solid border-gray-200 dark:border-accent">
-      <div className="flex flex-1 flex-col justify-center px-4 py-6 sm:py-12 sm:px-6 lg:px-20 xl:px-24 sm:pb-28">
+      <div className="flex flex-1 flex-col justify-center px-4 sm:py-12 sm:px-6 lg:px-20 xl:px-24 sm:pb-28">
         <div className="mx-auto w-full max-w-sm lg:w-96">
-          <div>
-            <h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-200">
-              Please sign in to your McDonald&apos;s account to place your order.
+            <h2 className="sm:mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900 dark:text-gray-200">
+                Please sign in to your McDonald&apos;s account to place your order.
             </h2>
-          </div>
           <div className="mt-10">
             <LoginForm />
           </div>

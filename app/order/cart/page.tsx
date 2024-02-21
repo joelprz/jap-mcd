@@ -9,7 +9,7 @@ export default async function Cart() {
     const products = await fetchProducts();
 
     return (
-    <div className="bg-white">
+    <div className="bg-white mb-[165px] sm:mb-[65px]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <h1 className="text-3xl font-bold tracking-tight text-gray-900">Order Cart</h1>
             <form className="mt-12">
