@@ -31,8 +31,10 @@ export default async function Navigation() {
           <div className="flex items-center px-2 lg:px-0">
             <div className="flex-shrink-0 flex space-x-2">
               {session && session.user &&
-                  <><CartLink path="/order/cart" />
-                  <LogoutButton /></>
+                  <>
+                    <CartLink path="/order/cart" />
+                    <LogoutButton />
+                  </>
               }
             </div>
           </div>

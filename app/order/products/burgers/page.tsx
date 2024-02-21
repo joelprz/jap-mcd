@@ -1,7 +1,6 @@
 import React from "react";
 import Image, {StaticImageData} from "next/image";
-
-import { fetchProducts } from "../../../lib/database";
+import {fetchProducts} from "@/app/lib/database";
 
 import blackBurger from "@/public/products/black-burger.jpeg"
 import baconEgg from "@/public/products/bacon-egg.jpeg"
@@ -38,20 +37,20 @@ export default async function Page() {
               >
                   {products.map((product, idx) => (
                       <li key={product.name} >
-                          <div className="aspect-[3/2] w-full rounded-2xl object-cover relative overflow-clip">
                           <Link href={`/order/products/burgers/${product.slug}`}>
-                             <Image
-                               priority={idx === 0}
-                               style={{
-                                 objectFit: "cover",
-                               }}
-                               fill={true}
-                               sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
-                               alt={product.slug}
-                               src={burgerMap[product.image]}
-                             />
-                         </Link>
-                          </div>
+                              <div className="aspect-[3/2] w-full rounded-2xl object-cover overflow-clip relative">
+                                 <Image
+                                   priority={idx === 0}
+                                   style={{
+                                     objectFit: "cover",
+                                   }}
+                                   fill={true}
+                                   sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
+                                   alt={product.slug}
+                                   src={burgerMap[product.image]}
+                                 />
+                              </div>
+                          </Link>
                           <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{product.name}</h3>
                           <p className="text-base leading-7 text-gray-600">{product.description}</p>
                       </li>

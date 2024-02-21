@@ -23,6 +23,7 @@ export default function Index() {
           src={BlackBurger}
           aria-hidden={true}
           alt=""
+          priority={true}
         />
       </div>
     </div>

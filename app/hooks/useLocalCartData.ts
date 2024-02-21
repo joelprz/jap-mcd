@@ -20,7 +20,7 @@ export default function useLocalCartData() {
         };
 
         window.addEventListener("CartUpdated", listenStorageChange);
-        //return () => window.removeEventListener("CartUpdated", listenStorageChange);
+        return () => window.removeEventListener("CartUpdated", listenStorageChange);
     }, []);
 
     return shoppingCart;
