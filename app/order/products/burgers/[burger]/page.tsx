@@ -37,7 +37,7 @@ export default async function BurgerPage({ params }: { params: { burger: string 
                             />
                             Back to List
                         </Link>
-                        <AddToCartButton productId={product.id} />
+                        <AddToCartButton productId={product.id} productName={product.name} />
                     </div>
                 </div>
                 {/* Product image */}
