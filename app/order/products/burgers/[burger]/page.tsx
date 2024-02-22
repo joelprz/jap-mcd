@@ -39,9 +39,8 @@ export default async function BurgerPage({ params }: { params: { burger: string 
                         <AddToCartButton productId={product.id} productName={product.name} />
                     </div>
                 </div>
-                {/* Product image */}
                 <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
-                    <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg relative w-full h-[300px] sm:h-[500px]">
+                    <div className="drop-shadow-burger aspect-h-1 aspect-w-1 overflow-hidden rounded-lg relative w-full h-[300px] sm:h-[500px]">
                         <Image
                             style={{
                                 objectFit: "cover",

@@ -43,8 +43,10 @@ export default function AddToCartButton({productId, productName}:{productId:stri
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
         >
-            <div className="absolute -mt-5 ml-[-9px!important] z-50 pointer-events-auto w-full max-w-lg overflow-hidden border border-accent rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-                <div className="p-8">
+            <div className="absolute ml-[-1rem!important] z-50 min-[350px]:w-[340px] min-[400px]:w-[380px] min-[480px]:w-[490px] w-[440px] -mt-5 pointer-events-auto border border-accent rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="p-8" onClick={() => {
+                    setIsFragOpen(false)
+                }}>
                     <div className="flex items-start">
                         <div className="flex-shrink-0">
                             <CheckCircleIcon className="h-6 w-6 text-accent" aria-hidden="true" />

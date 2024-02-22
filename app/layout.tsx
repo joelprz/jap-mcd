@@ -18,11 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full bg-white _dark">
       <body className="h-full bg-white dark:bg-darkMcBlack">
-        <div className="min-h-full">
-          <Navigation />
-          <div className="px-4 pb-4 sm:px-10 sm:pb-10 pt-[100px]">{children}</div>
+        <Navigation />
+        <div className="min-h-full pt-24 relative">
+          <div className="px-4 pb-4 sm:px-10 sm:pb-10 sm:pt-[40px]">{children}</div>
+          <Footer/>
         </div>
-        <Footer/>
+
       </body>
     </html>
   );

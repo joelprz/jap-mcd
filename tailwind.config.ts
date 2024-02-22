@@ -12,6 +12,9 @@ const config: Config = {
       colors: {
         accent: "#ffbc0d",
         darkMcBlack: "#111111",
+      },
+      dropShadow: {
+        'burger': '0 3px 3px rgba(0, 0, 0, 0.50)',
       }
     },
   },

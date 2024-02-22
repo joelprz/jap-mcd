@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer(){
 
     return (
-    <footer className="bg-white dark:bg-black border-t dark:border-t-accent border-t-gray-200 h-[120px] -mt-[120px] sm:h-[65px] sm:-mt-[65px]">
+    <footer className="bg-white dark:bg-black border-t dark:border-t-accent border-t-gray-200 h-[116px] md:h-[65px] absolute bottom-0 w-full">
         <div className="mx-auto max-w-7xl px-6 py-4 md:flex md:items-center md:justify-between lg:px-8">
             <div className="flex justify-center space-x-6 md:order-2">
                 <Link href={"#"}  className="h-8 w-8" aria-hidden="true">

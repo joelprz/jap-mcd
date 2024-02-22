@@ -26,7 +26,7 @@ export default function CartProduct({product, amount}:{product:FindProductType, 
                     }}
                     width={100}
                     height={100}
-                    className="h-24 w-24 rounded-lg object-cover object-center sm:h-32 sm:w-32"
+                    className="drop-shadow-burger h-24 w-24 rounded-lg object-cover object-center sm:h-32 sm:w-32"
                     sizes="(max-width: 768px) 10vw, (max-width: 1200px) 10vw, 10vw"
                     alt={""}
                     src={`/products/${product?.slug}.jpeg`}
