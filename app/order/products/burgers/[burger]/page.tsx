@@ -10,7 +10,7 @@ export default async function BurgerPage({ params }: { params: { burger: string 
     const formattedPrice = formatCurrency(product.price);
 
     return (
-        <div className="bg-white dark:bg-darkMcBlack mb-[165px] sm:mb-[65px]">
+        <main className="bg-white dark:bg-darkMcBlack mb-[165px] sm:mb-[65px]">
             <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:py-20 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                 <div className="lg:max-w-lg lg:self-end">
                     <div className="mt-4">
@@ -53,7 +53,7 @@ export default async function BurgerPage({ params }: { params: { burger: string 
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 
