@@ -2,28 +2,28 @@ import React from "react";
 import Image, {StaticImageData} from "next/image";
 import {fetchProducts} from "@/app/lib/database";
 
-import blackBurger from "@/public/products/black-burger.jpeg"
-import baconEgg from "@/public/products/bacon-egg.jpeg"
-import burgerA from "@/public/products/burger-a.jpeg"
-import chickenBurger from "@/public/products/chicken-burger.jpeg"
-import fries from "@/public/products/fries.jpeg"
-import mushroomBurger from "@/public/products/mushroom-burger.jpeg"
+// import blackBurger from "@/public/products/black-burger.jpeg"
+// import baconEgg from "@/public/products/bacon-egg.jpeg"
+// import burgerA from "@/public/products/burger-a.jpeg"
+// import chickenBurger from "@/public/products/chicken-burger.jpeg"
+// import fries from "@/public/products/fries.jpeg"
+// import mushroomBurger from "@/public/products/mushroom-burger.jpeg"
 import Link from "next/link";
 
 
 export default async function Page() {
   const products = await fetchProducts();
-  const burgerMap:{ [key: string]: StaticImageData } = {
-      "black-burger": blackBurger,
-      "bacon-egg":baconEgg,
-      "burger-a": burgerA,
-      "chicken-burger": chickenBurger,
-      "fries":fries,
-      "mushroom-burger": mushroomBurger
-  }
+  // const burgerMap:{ [key: string]: StaticImageData } = {
+  //     "black-burger": blackBurger,
+  //     "bacon-egg":baconEgg,
+  //     "burger-a": burgerA,
+  //     "chicken-burger": chickenBurger,
+  //     "fries":fries,
+  //     "mushroom-burger": mushroomBurger
+  // }
 
   return (
-      <div className="bg-white mb-[165px] sm:mb-[65px]">
+      <div className="mb-36 sm:mb-32">
           <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-8">
               <div className="mx-auto max-w-2xl lg:mx-0">
                   <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Burgers</h1>
@@ -38,7 +38,7 @@ export default async function Page() {
                   {products.map((product, idx) => (
                       <li key={product.name} >
                           <Link href={`/order/products/burgers/${product.slug}`}>
-                              <div className="aspect-[3/2] w-full rounded-2xl object-cover overflow-clip relative">
+                              <div className="aspect-[3/2] hover:drop-shadow-burger w-full rounded-2xl object-cover overflow-clip relative">
                                  <Image
                                    priority={idx === 0}
                                    style={{
@@ -47,7 +47,8 @@ export default async function Page() {
                                    fill={true}
                                    sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
                                    alt={product.slug}
-                                   src={burgerMap[product.image]}
+                                   //src={burgerMap[product.image]}
+                                   src={`/products/${product.image}.jpeg`}
                                  />
                               </div>
                           </Link>
