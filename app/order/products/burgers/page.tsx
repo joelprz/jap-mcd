@@ -11,8 +11,8 @@ export default async function Page() {
       <div className="mb-36 sm:mb-32">
           <div className="mx-auto max-w-7xl px-4 lg:px-8 pb-8">
               <div className="mx-auto max-w-2xl lg:mx-0">
-                  <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Burgers</h1>
-                  <p className="mt-6 text-lg leading-8 text-gray-600 hidden sm:block">
+                  <h1 className="text-3xl font-bold tracking-tight dark:text-gray-200 text-gray-900 sm:text-4xl">Burgers</h1>
+                  <p className="mt-6 text-lg leading-8 text-gray-600 hidden sm:block dark:text-gray-200">
                       Some additional text to whet appetites.
                   </p>
               </div>
@@ -36,8 +36,8 @@ export default async function Page() {
                                  />
                               </div>
                           </Link>
-                          <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{product.name}</h3>
-                          <p className="text-base leading-7 text-gray-600">{product.description}</p>
+                          <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-200">{product.name}</h3>
+                          <p className="text-base leading-7 text-gray-600 dark:text-gray-200">{product.description}</p>
                       </li>
                   ))}
               </ul>

@@ -36,10 +36,10 @@ export default function CartProduct({product, amount}:{product:FindProductType, 
                 <div>
                     <div className="flex justify-between sm:grid sm:grid-cols-2">
                         <div className="pr-6">
-                            <h3 className="text-sm font-medium text-gray-700 hover:text-gray-800">{product?.name}</h3>
-                            <p className="mt-1 text-sm text-gray-500">{product?.description}</p>
+                            <h3 className="text-sm font-medium text-gray-700 hover:text-gray-800 dark:text-gray-200">{product?.name}</h3>
+                            <p className="mt-1 text-sm text-gray-500 dark:text-gray-200">{product?.description}</p>
                         </div>
-                        <p className="text-right text-sm font-medium text-gray-900">{formattedTotal}</p>
+                        <p className="text-right text-sm font-medium text-gray-900 dark:text-gray-200">{formattedTotal}</p>
                     </div>
                     <div className="mt-4 flex items-center sm:absolute sm:left-1/2 sm:top-0 sm:mt-0 sm:block">
                         <label htmlFor={`quantity-${product?.id}`} className="sr-only">

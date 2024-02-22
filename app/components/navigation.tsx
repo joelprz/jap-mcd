@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import {auth} from "@/auth";
+
 import CartLink from "./cartLink";
 import arches from "../../public/arches-logo.svg";
 import LogoutButton from "./logoutBtn";
+import DarkModeToggle from "@/app/components/darkModeToggle";
 
 export default async function Navigation() {
   const session = await auth();
@@ -36,6 +38,7 @@ export default async function Navigation() {
                     <LogoutButton />
                   </>
               }
+              <DarkModeToggle/>
             </div>
           </div>
         </div>

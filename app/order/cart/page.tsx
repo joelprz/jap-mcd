@@ -9,9 +9,9 @@ export default async function Cart() {
     const products = await fetchProducts();
 
     return (
-    <div className="bg-white mb-[165px] sm:mb-[65px]">
+    <div className="bg-white dark:bg-darkMcBlack mb-[165px] sm:mb-[65px]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Order Cart</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-200">Order Cart</h1>
             <form className="mt-12">
                 <div>
                     <h2 className="sr-only">Items in your cart</h2>
@@ -23,7 +23,7 @@ export default async function Cart() {
                         <div className="flow-root">
                             <dl className="-my-4 divide-y divide-gray-200 text-sm">
                                 <div className="flex items-center justify-between py-4">
-                                    <dt className="text-base font-medium text-gray-900">Order total</dt>
+                                    <dt className="text-base font-medium text-gray-900 dark:text-gray-200">Order total</dt>
                                     <CartProductsTotal products={products}/>
                                 </div>
                             </dl>
@@ -40,7 +40,7 @@ export default async function Cart() {
                     <div className="mt-6 text-center text-sm text-gray-500">
                         <p>
                             or{' '}
-                            <Link href={"/"} className="font-medium text-gray-900 hover:text-accent">
+                            <Link href={"/"} className="font-medium text-gray-900 hover:text-accent dark:text-gray-200">
                                 Continue Ordering<span aria-hidden="true"> &rarr;</span>
                             </Link>
                         </p>
