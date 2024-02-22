@@ -1,26 +1,11 @@
 import React from "react";
-import Image, {StaticImageData} from "next/image";
+import Image from "next/image";
 import {fetchProducts} from "@/app/lib/database";
 
-// import blackBurger from "@/public/products/black-burger.jpeg"
-// import baconEgg from "@/public/products/bacon-egg.jpeg"
-// import burgerA from "@/public/products/burger-a.jpeg"
-// import chickenBurger from "@/public/products/chicken-burger.jpeg"
-// import fries from "@/public/products/fries.jpeg"
-// import mushroomBurger from "@/public/products/mushroom-burger.jpeg"
 import Link from "next/link";
-
 
 export default async function Page() {
   const products = await fetchProducts();
-  // const burgerMap:{ [key: string]: StaticImageData } = {
-  //     "black-burger": blackBurger,
-  //     "bacon-egg":baconEgg,
-  //     "burger-a": burgerA,
-  //     "chicken-burger": chickenBurger,
-  //     "fries":fries,
-  //     "mushroom-burger": mushroomBurger
-  // }
 
   return (
       <div className="mb-36 sm:mb-32">
@@ -47,7 +32,6 @@ export default async function Page() {
                                    fill={true}
                                    sizes="(max-width: 768px) 30vw, (max-width: 1200px) 30vw, 30vw"
                                    alt={product.slug}
-                                   //src={burgerMap[product.image]}
                                    src={`/products/${product.image}.jpeg`}
                                  />
                               </div>
