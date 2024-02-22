@@ -15,7 +15,7 @@ export default function DarkModeToggle() {
     }, [enabled])
 
     return (
-        <Switch.Group as="div" className="flex items-center pl-10">
+        <Switch.Group as="div" className="flex items-center pl-2 sm:pl-10">
         <Switch
             checked={enabled}
             onChange={setEnabled}
@@ -49,9 +49,9 @@ export default function DarkModeToggle() {
                 </span>
           </span>
         </Switch>
-    <Switch.Label as="span" className="ml-3 text-sm">
-        <span className="font-medium text-gray-900 dark:text-gray-200">Dark mode</span>
-    </Switch.Label>
+        <Switch.Label as="span" className="ml-3 text-sm hidden sm:block">
+            <span className="font-medium text-gray-900 dark:text-gray-200">Dark mode</span>
+        </Switch.Label>
             </Switch.Group>
     )
 }
