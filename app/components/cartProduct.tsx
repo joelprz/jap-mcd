@@ -1,20 +1,38 @@
 import Image from "next/image";
-import {Product} from "@/app/lib/definitions";
 import React, {ChangeEvent, useState} from "react";
+
+import {Product} from "@/app/lib/definitions";
 import {formatCurrency} from "@/app/lib/utils";
+import useLocalCartData from "@/app/hooks/useLocalCartData";
 
 type FindProductType = Product | undefined;
 export default function CartProduct({product, amount}:{product:FindProductType, amount: number}) {
     const [quantity, setQuantity] = useState<number | undefined>(amount);
     const formattedTotal = product?.price ? formatCurrency(product.price * amount) : 0;
+    const cartData = useLocalCartData();
 
     // TODO This needs to be debounced to protect against rapid clicking
     const handleQuantityUpdate = (e:ChangeEvent) => {
+        const _cartData = {...cartData};
         const target = e.target as HTMLInputElement;
         const intValue = parseInt(target.value);
+
+
         if (Number.isInteger(intValue)) {
             setQuantity(intValue);
+            if (product) {
+                _cartData[product.id] = intValue;
+                window.localStorage.setItem('MCD_APP_STATE', JSON.stringify(_cartData));
+                window.dispatchEvent(new Event("CartUpdated"));
+            }
         }
+    }
+
+    const handleRemoveItem = () => {
+        const _cartData = {...cartData};
+        product && delete _cartData[product.id];
+        window.localStorage.setItem('MCD_APP_STATE', JSON.stringify(_cartData));
+        window.dispatchEvent(new Event("CartUpdated"));
     }
 
     return (
@@ -57,6 +75,7 @@ export default function CartProduct({product, amount}:{product:FindProductType, 
                         />
                         <button
                             type="button"
+                            onClick={handleRemoveItem}
                             className="ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:ml-0 sm:mt-3"
                         >
                             <span>Remove</span>
