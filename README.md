@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) app created by Joel Przybylowski during the interview process for a NextJS position with McDonald's. 
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repo and install project modules:
+
+```bash
+npm install
+# or
+yarn
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +22,46 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run tests:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run test
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. Notice the email and password required to authenticate are in the input fields as placeholder text.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Login email: ronald@mcd.com
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Login Password: "happymeal"
+## Application features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+What can be observed in the code and by viewing in the browser?:
 
-## Deploy on Vercel
+- NextJS architecture prioritizing server-side rendering, with client components nearest the bottom of the rendering tree.
+- NextJS Error and Suspense boundaries utilizing Error and Loading pages in routes.
+- NextJS image optimization.
+- Basic username/password authentication using nextAuth and Vercel Postgres.
+- Postgres data storage and queries along with localStorage/useState for persistent data on browser Refresh. 
+- Mobile-first, responsive design.
+- Demonstration of basic Jest unit and snapshot tests.
+- Dark mode theming and interactive toggle.
+- In situ item selection confirmation.
+- Visual and functional approximation of an e-commerce quick-service ordering experience.
+- Logout functionality and cart data erasure.
+- Tailwind UI components and styling.
+- I'm certainly forgetting something...
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The [GitHub repository](https://github.com/joelprz/jap-mcd) for your perusal and feedback.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Bugs and/or deficiencies?
+
+Is there something I overlooked or didn't have time to complete? Where can improvements be made?
+
+- Surely I've duplicated some code where I should have created shared component and have otherwise made some (hopefully minor) mistakes.
+- I realized too late that if you toggle dark mode "on" before logging in the value is not preserved when access to the app is achieved.
+- Organization. This is a small project completed by a single developer in a limited time-frame. This basic organization would not scale well.
+- You'll let me know what else I'm forgetting!   =)
+
+## Technologies leveraged
+- Tailwind UI. All other technologies listed in [package.json](https://github.com/joelprz/jap-mcd/blob/main/package.json).
