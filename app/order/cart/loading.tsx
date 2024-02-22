@@ -54,7 +54,7 @@ export default async function Cart() {
                             <div className="flow-root">
                                 <dl className="-my-4 divide-y divide-gray-200 text-sm">
                                     <div className="flex items-center justify-between py-4">
-                                        <dt className="text-base font-medium text-gray-900 dark:text-gray-200">Order total</dt>
+                                        <dt className="text-base font-medium text-gray-900 dark:text-gray-900">Order total</dt>
                                         <dd className="text-base font-medium text-gray-900">$0.00</dd>
                                     </div>
                                 </dl>
