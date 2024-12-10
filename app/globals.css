@@ -20,6 +20,12 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+@layer components {
+  .input-mcd {
+    @apply block w-full rounded-md border-0 py-1.5 px-1.5 text-gray-900 shadow-sm placeholder:text-gray-400 outline-accent ring-1 ring-gray-300 focus:ring-accent sm:text-sm sm:leading-6;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
